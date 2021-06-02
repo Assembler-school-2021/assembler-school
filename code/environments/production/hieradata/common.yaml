@@ -1,0 +1,13 @@
+---
+
+classes:
+   - common_hosts
+   - common_packages
+   - ntp
+   - timezone
+
+timezone::timezone: 'Europe/Madrid'
+ntp::servers:
+  - "ntp1.hetzner.de"
+  - "ntp2.hetzner.com"
+  - "ntp3.hetzner.net"
