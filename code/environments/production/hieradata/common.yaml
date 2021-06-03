@@ -5,9 +5,17 @@ classes:
    - common_packages
    - ntp
    - timezone
+   - '::accounts'
 
 timezone::timezone: 'Europe/Madrid'
 ntp::servers:
   - "ntp1.hetzner.de"
   - "ntp2.hetzner.com"
   - "ntp3.hetzner.net"
+
+accounts::users:
+  root:
+    ssh_keys:
+      'enrique@ENRIQUE-PRO': # an unique indentifier of a key
+        type: "ssh-rsa"
+        key: "AAAAB3NzaC1yc2EAAAADAQABAAABgQCirOLeHSnEVUpvfdbnvAiXKfy09YSBoZIZjhLBiRnbB4W40CFQ6Q2rXqD0vGq4NrvbiHR/qzgRXaS8k9yCZjmoqnWB+oAQFZGO0GYi8W22ycp08iiWyh3BHqeVjcc7xblovOktWUlriRKxc5H8Q9fLvlgIwly7xa33jAVhmugp+EBmRhULHV8g1XRAhiGVnClGiyo/thpdtAP5L7pxHZ/eZ6eOwif8QXGZ/O+mODcDIYMvnJ45rVZ/gHxymhJw5tet2A8R5GlaWtVFR0zuiFYxwGJ+/XKO6lrSZ5LZyiiKK+53zmGpsgbnEOVCRMmqafWNcmYNTny1njAv4pjVAOSAoVskfW7cvphBGa96m4SbCIz3uXeKQEZ+zTEUEvSae1Op5WyEL3NGFeImJZ9UIAAhwuxlMwhvpuKlTUmwacH09Y4Ony31P6d7PrkkfA/gpxIHg73NKzW41gsoELI4j4Vys4RJd5+u1Q4tGxychXQxU7mGciEr/qf8UDMGAi029cc="
